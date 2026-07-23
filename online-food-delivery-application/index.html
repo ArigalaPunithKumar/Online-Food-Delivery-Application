@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraveBite | Namma Bengaluru's Finest Delivery</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://img.icons8.com/fluency/48/000000/hamburger.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Boxicons for Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class='bx bxs-bowl-hot'></i>
+                <span>CraveBite</span>
+            </div>
+            
+            <div class="search-bar">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search for dosas, biryani, restaurants..." id="search-input">
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn-text">Login</button>
+                <button class="btn-primary-small">Sign Up</button>
+                <div class="cart-btn" id="cart-toggle">
+                    <i class='bx bx-cart-alt'></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge"><i class='bx bxs-hot'></i> Namma Bengaluru's Finest</span>
+                <h1>"Awaken your senses with the <span>authentic flavors</span> of South India."</h1>
+                <p>From the crispy dosas of CTR to the aromatic biryanis of Meghana Foods, satisfy your deepest cravings with Bengaluru's legendary restaurants delivered piping hot to your door.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="document.querySelector('.menu-section').scrollIntoView({behavior: 'smooth'})">Order Now</button>
+                    <button class="btn-secondary" onclick="openRestListModal()">
+                        <i class='bx bx-store-alt'></i> See Restaurants
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Delicious Dosa" class="main-hero-img">
+                    <!-- Floating Elements -->
+                    <div class="floating-card top-left">
+                        <i class='bx bxs-star'></i>
+                        <div class="float-content">
+                            <h4>4.9</h4>
+                            <p>Top Rated</p>
+                        </div>
+                    </div>
+                    <div class="floating-card bottom-right">
+                        <i class='bx bxs-time-five'></i>
+                        <div class="float-content">
+                            <h4>Fast</h4>
+                            <p>Delivery in 30 min</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="section-header">
+                <h2>Explore Cravings</h2>
+            </div>
+            <div class="category-list" id="category-list">
+                <!-- Categories injected via JS -->
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu-section">
+            <div class="section-header menu-header-complex">
+                <div class="menu-title-area">
+                    <h2>Discover Local Favorites</h2>
+                    <div class="veg-toggle-container">
+                        <span class="veg-label">Veg Only</span>
+                        <label class="switch">
+                            <input type="checkbox" id="veg-only-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filters-container">
+                    <select id="restaurant-select" class="restaurant-dropdown">
+                        <option value="all">All Restaurants in Bangalore</option>
+                        <option value="Meghana Foods">Meghana Foods</option>
+                        <option value="CTR">CTR (Shri Sagar)</option>
+                        <option value="Vidyarthi Bhavan">Vidyarthi Bhavan</option>
+                        <option value="Empire Restaurant">Empire Restaurant</option>
+                        <option value="MTR">MTR</option>
+                        <option value="Nagarjuna">Nagarjuna</option>
+                        <option value="Corner House">Corner House</option>
+                    </select>
+
+                    <div class="filters" id="category-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+                        <button class="filter-btn" data-filter="biryani">Biryani</button>
+                        <button class="filter-btn" data-filter="curries">Curries</button>
+                        <button class="filter-btn" data-filter="snacks">Snacks</button>
+                        <button class="filter-btn" data-filter="dessert">Desserts</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-grid" id="menu-grid">
+                <!-- Food cards injected via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart"><i class='bx bx-x'></i></button>
+        </div>
+        
+        <div class="cart-items-container" id="cart-items">
+            <!-- Items injected here -->
+            <div class="empty-cart" id="empty-cart-msg">
+                <i class='bx bx-shopping-bag'></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal-price">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <span id="delivery-fee">₹0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total-price">₹0</span>
+                </div>
+            </div>
+            <button class="btn-primary checkout-btn" id="checkout-btn">Checkout <i class='bx bx-right-arrow-alt'></i></button>
+        </div>
+    </aside>
+
+    <!-- Combo Suggestion Modal -->
+    <div class="modal-overlay" id="combo-modal-overlay">
+        <div class="combo-modal">
+            <div class="combo-header">
+                <h3>Perfect Combination! <i class='bx bxs-star' style="color: #F39C12;"></i></h3>
+                <button class="close-modal" id="close-combo-modal"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="combo-body" id="combo-body">
+                <!-- Injected via JS -->
+            </div>
+            <div class="combo-footer">
+                <button class="btn-secondary" id="btn-skip-combo">No, just the item</button>
+                <button class="btn-primary" id="btn-add-combo">Yes, Add Combo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Restaurant View Modal -->
+    <div class="modal-overlay" id="restaurant-modal-overlay">
+        <div class="restaurant-modal">
+            <div class="restaurant-modal-header">
+                <h2 id="restaurant-modal-title">Restaurant Menu</h2>
+                <button class="close-modal" id="close-restaurant-modal"><i class='bx bx-x'></i></button>
+            </div>
+            <p class="restaurant-modal-desc">Explore more delicious dishes from this restaurant.</p>
+            <div class="menu-grid modal-menu-grid" id="restaurant-modal-grid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Restaurants List Modal -->
+    <div class="modal-overlay" id="restaurants-list-modal">
+        <div class="combo-modal" style="max-height: 80vh; display: flex; flex-direction: column;">
+            <div class="combo-header">
+                <h3>Select a Restaurant</h3>
+                <button class="close-modal" id="close-rest-list-modal"><i class='bx bx-x'></i></button>
+            </div>
+            <div style="overflow-y: auto; flex: 1; padding-right: 8px;" id="vertical-restaurant-list">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
