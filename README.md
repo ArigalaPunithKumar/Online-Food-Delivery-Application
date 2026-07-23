@@ -2,7 +2,7 @@
 
 **Frontend developer @ TAP Academy, Bangalore** — building with HTML, CSS & AI tools.
 
-🔗 **Live Demo:** [Insert Live URL Here]
+🔗 **Live Demo:** [[Insert Live URL Here](https://arigalapunithkumar.github.io/Online-Food-Delivery-Application/)]
 
 ## 🍔 About the Project: CraveBite Food Delivery
 **CraveBite** is a fully functional, highly interactive frontend web application designed to simulate a modern food delivery experience specifically tailored for Namma Bengaluru. It features a sleek, premium UI with smooth micro-animations, built entirely without external CSS frameworks to showcase raw styling capabilities. 
