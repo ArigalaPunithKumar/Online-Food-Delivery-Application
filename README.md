@@ -1,32 +1,99 @@
-# 👋 Hi, I'm A Punith Kumar
+# CraveBite — Food Delivery Web Application
 
-**Frontend developer @ TAP Academy, Bangalore** — building with HTML, CSS & AI tools.
+A responsive food-delivery web application built with HTML, CSS, and Vanilla JavaScript, focused on interactive UI, client-side state management, filtering, cart functionality, and dynamic content rendering.
 
-🔗 **Live Demo:** [(https://arigalapunithkumar.github.io/Online-Food-Delivery-Application/)]
+## Overview
 
-## 🍔 About the Project: CraveBite Food Delivery
-**CraveBite** is a fully functional, highly interactive frontend web application designed to simulate a modern food delivery experience specifically tailored for Namma Bengaluru. It features a sleek, premium UI with smooth micro-animations, built entirely without external CSS frameworks to showcase raw styling capabilities. 
+CraveBite simulates a modern food-delivery experience with restaurant browsing, menu filtering, cart management, quantity updates, combo suggestions, and interactive restaurant views.
 
-This project demonstrates my ability to build dynamic, responsive web interfaces from scratch and manage complex user interactions.
+## Key Features
 
-### 🧭 Key Features
-- **Dynamic Hero Section** — Engaging landing area that immediately draws users in.
-- **Interactive Menu Grid** — Browse legendary South Indian specialties (like CTR's Benne Dosa or Meghana's Biryani). Includes a fully working toggle to filter between Veg and Non-Veg items.
-- **Smart Cart System** — A sliding sidebar cart that calculates totals in real-time, handles quantities, and updates dynamically using Vanilla JavaScript state management.
-- **Combo Suggestions Modal** — Intelligent upselling feature that suggests perfect pairings (like Filter Coffee with Dosa) right before adding items to the cart.
-- **Restaurant Views** — A dedicated section listing iconic Bangalore restaurants. Clicking a restaurant opens a modal showing exclusive dishes available from that specific vendor.
-- **Guaranteed Local Assets** — Uses hyper-realistic, AI-generated local imagery ensuring lightning-fast load times without relying on external CDN links.
+- Responsive food-delivery interface
+- Dynamic menu rendering
+- Veg/non-veg filtering
+- Restaurant browsing
+- Sliding cart
+- Quantity management
+- Real-time cart totals
+- Combo suggestion modal
+- Restaurant-specific menu views
+- Dynamic DOM updates
+- CSS transitions and interactions
 
-## 🛠 Tech Stack
-HTML5 · CSS3 (Vanilla) · Vanilla JavaScript · AI-assisted features (built with Google Antigravity) · Deployed on GitHub Pages
+## Technology Stack
 
-## 🤖 How I used AI
-I designed the core layout and styling structure; I used Google Antigravity to build the complex JavaScript cart logic, create the seamless pop-up modals (for combo suggestions and restaurant views), and generate the beautiful, hyper-realistic food asset images.
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- GitHub Pages
 
-## 📚 What I learned
-- Managing complex application state (Cart arrays, filtering by category and diet type) using Vanilla JavaScript.
-- Implementing smooth UI/UX features like sliding sidebars, interactive modals, and CSS transitions.
-- Dynamically rendering HTML content from JavaScript data arrays.
+## How It Works
 
----
-*⭐ If you liked this project, star the repo — it helps more students discover it.*
+```text
+JavaScript Data
+      |
+      v
+Menu Rendering
+      |
+      +--> Filtering
+      |
+      +--> Restaurant Selection
+      |
+      v
+Cart State
+      |
+      +--> Quantity Updates
+      |
+      +--> Total Calculation
+      |
+      v
+Dynamic UI
+```
+
+## My Contributions
+
+- Designed and implemented the frontend interface.
+- Built dynamic menu rendering with JavaScript data.
+- Implemented cart state and quantity management.
+- Added category and dietary filtering.
+- Developed interactive modals.
+- Implemented dynamic price and total calculations.
+- Added responsive layouts and CSS transitions.
+- Deployed the application with GitHub Pages.
+
+## Live Demo
+
+[Open CraveBite](https://arigalapunithkumar.github.io/Online-Food-Delivery-Application/)
+
+## Run Locally
+
+```bash
+git clone https://github.com/ArigalaPunithKumar/Online-Food-Delivery-Application.git
+cd Online-Food-Delivery-Application
+```
+
+Open `index.html` in a browser or use a local development server.
+
+## What I Learned
+
+- Client-side state management
+- Arrays and objects for application data
+- Dynamic DOM rendering
+- Event handling
+- Filtering and cart logic
+- Responsive UI development
+
+## Future Improvements
+
+- Backend persistence
+- User authentication
+- Restaurant/order APIs
+- Payment workflow simulation
+- Order tracking
+- React-based component architecture
+
+## Author
+
+**A Punith Kumar**
+
+[GitHub](https://github.com/ArigalaPunithKumar)
