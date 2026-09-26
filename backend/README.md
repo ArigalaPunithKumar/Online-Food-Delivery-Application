@@ -1,12 +1,31 @@
-# CraveBite Backend
+# CraveBite Spring Boot Backend
 
-Express API backed by Aiven MySQL.
+Spring Boot REST API for the CraveBite food delivery application.
 
-## Endpoints
+## Stack
 
-- GET /health
-- GET /ready
-- GET /api/menu
-- POST /api/orders
+- Java 17
+- Spring Boot
+- Spring Data JPA / Hibernate
+- MySQL
+- Aiven Cloud
+- Docker
 
-Database credentials are supplied through environment variables and are never committed to GitHub.
+## Environment variables
+
+- DB_HOST
+- DB_PORT
+- DB_NAME
+- DB_USER
+- DB_PASSWORD
+
+Database schema is created/updated by Hibernate. The application seeds the menu when the menu table is empty.
+
+## API
+
+GET /health
+GET /ready
+GET /api/menu
+POST /api/orders
+
+The database password is supplied through environment variables and is not committed to GitHub.
