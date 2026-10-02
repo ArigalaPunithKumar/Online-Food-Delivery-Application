@@ -4,24 +4,24 @@ const API_BASE_URL = "https://cravebite-backend-spring.onrender.com";
 const DELIVERY_FEE = 40;
 
 const foodData = [
-  {id:1,name:"Benne Masala Dosa",restaurant:"Vidyarthi Bhavan",description:"Legendary crispy, thick dosa roasted in rich butter with spicy potato filling.",price:85,category:"breakfast",type:"veg",rating:4.9,image:"./assets/dosa.png"},
-  {id:2,name:"Meghana Special Biryani",restaurant:"Meghana Foods",description:"Aromatic basmati rice cooked with tender chicken and secret spices.",price:320,category:"biryani",type:"non-veg",rating:4.8,image:"./assets/biryani.png"},
-  {id:3,name:"Butter Masala Dosa",restaurant:"CTR",description:"Crisp dosa served with signature coconut chutney and sambar.",price:75,category:"breakfast",type:"veg",rating:4.8,image:"./assets/dosa.png"},
-  {id:4,name:"Mutton Ghee Roast",restaurant:"Empire Restaurant",description:"Spicy and tangy Mangalorean style mutton roasted in pure ghee.",price:380,category:"curries",type:"non-veg",rating:4.7,image:"./assets/biryani.png"},
-  {id:5,name:"Idli Vada Sambar Dip",restaurant:"MTR",description:"Soft idlis and crispy vada submerged in flavorful lentil sambar.",price:90,category:"breakfast",type:"veg",rating:4.6,image:"./assets/idli.png"},
-  {id:6,name:"Chicken Kabab",restaurant:"Empire Restaurant",description:"Crispy, deep-fried chicken marinated in a blend of South Indian spices.",price:210,category:"snacks",type:"non-veg",rating:4.7,image:"./assets/biryani.png"},
-  {id:7,name:"Paneer Butter Masala",restaurant:"Meghana Foods",description:"Rich and creamy curry made with fresh cottage cheese.",price:240,category:"curries",type:"veg",rating:4.5,image:"./assets/dosa.png"},
-  {id:8,name:"Gobi Manchurian",restaurant:"Empire Restaurant",description:"Indo-Chinese style crispy cauliflower tossed in a spicy sauce.",price:150,category:"snacks",type:"veg",rating:4.4,image:"./assets/idli.png"},
-  {id:9,name:"Andhra Chicken Meal",restaurant:"Nagarjuna",description:"Spicy Andhra style chicken served with rice, pappu, and rasam.",price:290,category:"biryani",type:"non-veg",rating:4.9,image:"./assets/biryani.png"},
-  {id:10,name:"Death By Chocolate",restaurant:"Corner House",description:"Iconic DBC with vanilla ice cream, chocolate sponge, peanuts and hot fudge.",price:260,category:"dessert",type:"veg",rating:5,image:"./assets/dessert.png"}
+  {id:1,name:"Benne Masala Dosa",restaurant:"Vidyarthi Bhavan",description:"Legendary crispy, thick dosa roasted in rich butter with spicy potato filling.",price:85,category:"breakfast",type:"veg",rating:4.9,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/dosa.png"},
+  {id:2,name:"Meghana Special Biryani",restaurant:"Meghana Foods",description:"Aromatic basmati rice cooked with tender chicken and secret spices.",price:320,category:"biryani",type:"non-veg",rating:4.8,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/biryani.png"},
+  {id:3,name:"Butter Masala Dosa",restaurant:"CTR",description:"Crisp dosa served with signature coconut chutney and sambar.",price:75,category:"breakfast",type:"veg",rating:4.8,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/dosa.png"},
+  {id:4,name:"Mutton Ghee Roast",restaurant:"Empire Restaurant",description:"Spicy and tangy Mangalorean style mutton roasted in pure ghee.",price:380,category:"curries",type:"non-veg",rating:4.7,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/biryani.png"},
+  {id:5,name:"Idli Vada Sambar Dip",restaurant:"MTR",description:"Soft idlis and crispy vada submerged in flavorful lentil sambar.",price:90,category:"breakfast",type:"veg",rating:4.6,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/idli.png"},
+  {id:6,name:"Chicken Kabab",restaurant:"Empire Restaurant",description:"Crispy, deep-fried chicken marinated in a blend of South Indian spices.",price:210,category:"snacks",type:"non-veg",rating:4.7,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/biryani.png"},
+  {id:7,name:"Paneer Butter Masala",restaurant:"Meghana Foods",description:"Rich and creamy curry made with fresh cottage cheese.",price:240,category:"curries",type:"veg",rating:4.5,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/dosa.png"},
+  {id:8,name:"Gobi Manchurian",restaurant:"Empire Restaurant",description:"Indo-Chinese style crispy cauliflower tossed in a spicy sauce.",price:150,category:"snacks",type:"veg",rating:4.4,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/idli.png"},
+  {id:9,name:"Andhra Chicken Meal",restaurant:"Nagarjuna",description:"Spicy Andhra style chicken served with rice, pappu, and rasam.",price:290,category:"biryani",type:"non-veg",rating:4.9,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/biryani.png"},
+  {id:10,name:"Death By Chocolate",restaurant:"Corner House",description:"Iconic DBC with vanilla ice cream, chocolate sponge, peanuts and hot fudge.",price:260,category:"dessert",type:"veg",rating:5,image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/dessert.png"}
 ];
 
 const categories = [
-  {id:"breakfast",name:"Breakfast",image:"./assets/idli.png"},
-  {id:"biryani",name:"Biryani",image:"./assets/biryani.png"},
-  {id:"curries",name:"Curries",image:"./assets/restaurant.png"},
-  {id:"snacks",name:"Snacks",image:"./assets/dosa.png"},
-  {id:"dessert",name:"Dessert",image:"./assets/dessert.png"}
+  {id:"breakfast",name:"Breakfast",image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/idli.png"},
+  {id:"biryani",name:"Biryani",image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/biryani.png"},
+  {id:"curries",name:"Curries",image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/restaurant.png"},
+  {id:"snacks",name:"Snacks",image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/dosa.png"},
+  {id:"dessert",name:"Dessert",image:"https://raw.githubusercontent.com/ArigalaPunithKumar/Online-Food-Delivery-Application/main/assets/dessert.png"}
 ];
 
 const restaurants = [...new Set(foodData.map(item => item.restaurant))];
